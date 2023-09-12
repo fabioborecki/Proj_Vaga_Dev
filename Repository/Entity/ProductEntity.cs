@@ -12,6 +12,6 @@ namespace Repository.Entity
         public int ID { get; set; }
         public string ProductName { get; set; }
 
-
+        public int FK_Category { get; set; }
     }
 }
