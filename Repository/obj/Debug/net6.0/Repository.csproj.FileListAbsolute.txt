@@ -1,0 +1,17 @@
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\bin\Debug\net6.0\Repository.deps.json
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\bin\Debug\net6.0\Repository.runtimeconfig.json
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\bin\Debug\net6.0\Repository.dll
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\bin\Debug\net6.0\Repository.pdb
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\bin\Debug\net6.0\Common.dll
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\bin\Debug\net6.0\Common.pdb
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\obj\Debug\net6.0\Repository.csproj.AssemblyReference.cache
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\obj\Debug\net6.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\obj\Debug\net6.0\Repository.AssemblyInfoInputs.cache
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\obj\Debug\net6.0\Repository.AssemblyInfo.cs
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\obj\Debug\net6.0\Repository.csproj.CoreCompileInputs.cache
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\obj\Debug\net6.0\Repository.csproj.CopyComplete
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\obj\Debug\net6.0\Repository.dll
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\obj\Debug\net6.0\refint\Repository.dll
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\obj\Debug\net6.0\Repository.pdb
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\obj\Debug\net6.0\Repository.genruntimeconfig.cache
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Repository\obj\Debug\net6.0\ref\Repository.dll

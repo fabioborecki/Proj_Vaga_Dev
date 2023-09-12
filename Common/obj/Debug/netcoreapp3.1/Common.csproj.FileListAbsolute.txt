@@ -1,0 +1,9 @@
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Common\bin\Debug\netcoreapp3.1\Common.dll
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Common\bin\Debug\netcoreapp3.1\Common.pdb
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Common\obj\Debug\netcoreapp3.1\Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Common\obj\Debug\netcoreapp3.1\Common.dll
+C:\Users\fabio\source\repos\Proj_Vaga_Dev\Common\obj\Debug\netcoreapp3.1\Common.pdb

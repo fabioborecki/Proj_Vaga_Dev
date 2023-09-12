@@ -24,7 +24,16 @@ namespace Proj_Vaga_Dev
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-        }
+			services.AddCors(options =>
+					 options.AddPolicy("MyPolicy",
+					 builder =>
+					 {
+						 builder
+							  .AllowAnyMethod()
+						 .AllowAnyHeader()
+							  .AllowAnyOrigin();
+					 }));
+		}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -44,9 +53,11 @@ namespace Proj_Vaga_Dev
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            
+			app.UseCors(option => option.AllowAnyOrigin()); ;
+			app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
+			app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",

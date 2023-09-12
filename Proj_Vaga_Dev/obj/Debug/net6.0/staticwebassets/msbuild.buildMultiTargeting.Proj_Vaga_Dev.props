@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Proj_Vaga_Dev.props" />
+</Project>
