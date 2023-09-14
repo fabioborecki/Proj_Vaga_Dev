@@ -1,14 +1,15 @@
 ﻿
 using API.Services;
 using Common;
+using LinqToDB;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Repository.Context;
-
-
+using Repository.Entity;
+using System.Drawing.Design;
 
 namespace API.Controllers
 {
@@ -30,9 +31,15 @@ namespace API.Controllers
         public IActionResult GetListCategory()
                            => Ok(_categoryService.GetCategory());
 
-		
+        [HttpGet("FindId")]
+        public IActionResult Getvalue(int id)
+        {
+            return Ok(_categoryService.GetCategory().FirstOrDefault(p => p.ID == id));
+       // value: _categoryService.GetCategory().FirstOrDefault(p => p.ID == id).CategoryName.ToString()); ; ; ;
 
-		[HttpPost("create")]
+        }
+
+        [HttpGet("Create")]
         public IActionResult Create(CategoriaModel category)
         {
             _categoryService.AddCategory(new CategoriaModel()

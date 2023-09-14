@@ -38,7 +38,8 @@ namespace API.Services
 
 
 
-		public IList<CategoryEntity> GetCategory()
+
+        public IList<CategoryEntity> GetCategory()
 		{
             return _categoryRepository.GetCategory().ToList();
 

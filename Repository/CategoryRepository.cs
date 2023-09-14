@@ -27,16 +27,22 @@ namespace Repository
 
         }
 
+
+
         public void Update(CategoryEntity entity)
         {
             _dataContext.Update(entity);
             _dataContext.SaveChanges();
         }
+   
+
 
         public IList<CategoryEntity> GetCategory()
         {
             return _dataContext.Category.ToList();
 
         }
+
+
     }
 } 
