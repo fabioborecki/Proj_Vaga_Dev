@@ -1,4 +1,5 @@
-﻿using Repository.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using Repository.Context;
 using Repository.Entity;
 using System;
 using System.Collections.Generic;
@@ -30,5 +31,15 @@ namespace Repository
               
 
 		}
-	}
+
+
+        public void Remove(ProductEntity entity)
+        {
+            _productContext.Attach(entity);
+            _productContext.Remove(entity);
+            _productContext.SaveChanges();
+
+
+        }
+    }
 }

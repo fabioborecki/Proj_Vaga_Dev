@@ -11,6 +11,8 @@ namespace Repository
     {
         public void Add(ProductEntity entity);
         public IList<ProductEntity> GetProduct();
+        public void Remove(ProductEntity entity);
 
-	}
+
+    }
 }

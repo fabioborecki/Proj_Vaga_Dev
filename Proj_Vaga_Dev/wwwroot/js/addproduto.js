@@ -26,42 +26,80 @@ async function getlistproducts() {
 async function preenche_tabela() {
     let data_products_list = await getlistproducts();
 
-    data_products_list.forEach((values, key) => {
+    data_products_list.forEach((values) => {
+
         getvaluebyid(values.fK_Category).then(value => {
-            let name_tdbodytable = ('<td>' + values.productName + '</td>');
-            let category_tdbodytable = ('<td>' + value + '</td>');
-            let checkboxbodytable = ('<td> <input type="checkbox" value = "' + values.id + '"/> </td>');
-            $('#seletor').append('<tr>' + name_tdbodytable + category_tdbodytable + checkboxbodytable);
+            let btn_function = ('<td> <a href="#editProductModal"  data-toggle="modal"> <i class="material-symbols-outlined"> edit </i >  </a> </td> ');
+            let name_tdbodytable = ('<td> <input type="checkbox" value = " ' + values.id + '"/> </td> <td style="width:400px">' + values.productName + '</td>');
+            let category_tdbodytable = ('<td >' + value + '</td>');
+
+            $('#seletor').append('<tr>' + name_tdbodytable + category_tdbodytable +'<td style="width:380px"> </td>'+ btn_function + '</tr>');
 
 
 
 
 
-        })
+        }
+        )
 
     });
 }
 
 
+function removeproduct(event) {
 
+        var inputs = document.querySelectorAll('input[type="checkbox"]:checked');
+
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].checked == true) { //segunda validação p confirmar rs
+                jsonremove(inputs[i].value);
+            }
+        }
+    }
+
+
+function jsonremove(id) {
+    var formData = {
+        id: id
+    }
+    $.ajax({
+        type: "DELETE",
+        dataType: "Delete",
+        contentType: "application/json ; charset= UTF-8",
+        data: JSON.stringify(formData),
+        url: "https://localhost:5002/api/Product/remove",
+        sucess: function (result) {
+            window.location.reload();
+        },
+        error: function (error) { }
+
+    })
+}
+
+function jsonadd(formData) {
+
+    $.ajax({
+        type: "POST",
+        dataType: "Post",
+        contentType: "application/json ; charset= UTF-8",
+        data: JSON.stringify(formData),
+        url: "https://localhost:5002/api/Product/create",
+        sucess: function (result) {
+            window.location.reload();
+        },
+        error: function (error) { }
+
+    })
+}
 
 
     function addproduto(event) {
-        event.preventDefault();
+        
         var formData = {
-            productname: $("#nomeproduto").val(),
-            Category_ID: $("#categoria_modal").val()
+            ProductName: $("#nomeproduto").val(),
+            FK_Category: $("#categoria_modal").val()
         }
-        $.ajax({
-            type: "POST",
-            dataType: "Json",
-            contentType: "application/json ; charset= UTF-8",
-            data: JSON.stringify(formData),
-            url: "https://localhost:5002/api/Product/create",
-            sucess: function (result) { },
-            error: function (error) { }
-
-        })
+        jsonadd(formData);
     }
 
 

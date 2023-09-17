@@ -29,16 +29,29 @@ namespace API.Controllers
 		[HttpPost("create")]
 		public IActionResult Create(ProdutoModel product)
 		{
-			_productService.AddProduct(new ProdutoModel()
-			{
-				ProductName = product.ProductName
+            _productService.AddProduct(new ProdutoModel()
+            {
+                ProductName = product.ProductName,
+                FK_Category = product.FK_Category
 
 
-			});
+            });
 			return Ok();
 		}
 
-	}
+
+        [HttpDelete("remove")]
+        public IActionResult delete(ProdutoModel product)
+        {
+            _productService.Remove(new ProdutoModel()
+            {
+                ID = product.ID
+            });
+            return Ok();
+
+        }
+
+    }
 
 
 

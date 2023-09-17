@@ -17,13 +17,23 @@ namespace API.Services
         {
             ProductEntity entity = new ProductEntity()
             {
-                ProductName = model.ProductName
+                ProductName = model.ProductName,
+                FK_Category = model.FK_Category
             };
 
             _productRepository.Add(entity);
         }
 
-		public IList<ProductEntity> GetProduct()
+        public void Remove(ProdutoModel model)
+        {
+            ProductEntity entity = new ProductEntity() {
+                ID = model.ID 
+            };
+            _productRepository.Remove(entity);
+            
+        }
+
+        public IList<ProductEntity> GetProduct()
 		{
 			return _productRepository.GetProduct().ToList();
 
