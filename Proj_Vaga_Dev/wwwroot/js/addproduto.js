@@ -2,9 +2,13 @@
     
         if ($("#newprod_cat_modal").val() == 0) {
             $('#cat_new_or_change').attr('placeholder', 'Nome da Categoria');
+            $('#btn_delete_cat').attr('type', 'hidden');
+            $('#btn_create_update_cat').attr('value', 'Criar');
         }
         else {
             $('#cat_new_or_change').attr('placeholder', 'Novo nome');
+            $('#btn_delete_cat').attr('type', 'button');
+            $('#btn_create_update_cat').attr('value', 'Atualizar');
         }
 
     
