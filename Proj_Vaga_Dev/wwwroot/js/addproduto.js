@@ -1,4 +1,14 @@
-﻿
+﻿function changePlaceholder() {
+    
+        if ($("#newprod_cat_modal").val() == 0) {
+            $('#cat_new_or_change').attr('placeholder', 'Nome da Categoria');
+        }
+        else {
+            $('#cat_new_or_change').attr('placeholder', 'Novo nome');
+        }
+
+    
+}
 async function getvaluebyid(id) {
     var response = await fetch("https://localhost:5002/api/category/FindId?id=" + id)
     var data = await response.json();
@@ -11,6 +21,9 @@ async function modal_getcategoryvalue() {
     data.forEach((values) => {
 
         $('#categoria_modal').append('<option value="' + values.id + '">' + values.categoryName + ' </option>');
+        $('#newprod_cat_modal').append('<option value="' + values.id + '">' + values.categoryName + ' </option>');
+
+        
         }
     )
  
@@ -85,7 +98,7 @@ function jsonadd(formData) {
         data: JSON.stringify(formData),
         url: "https://localhost:5002/api/Product/create",
         sucess: function (result) {
-            window.location.reload();
+     
         },
         error: function (error) { }
 
@@ -100,6 +113,7 @@ function jsonadd(formData) {
             FK_Category: $("#categoria_modal").val()
         }
         jsonadd(formData);
+        window.location.reload();
     }
 
 
